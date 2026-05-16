@@ -127,7 +127,7 @@ export class OrangeCloudIMClient {
       if (lastSeq !== undefined && lastSeq > 0) {
         await this.connection?.invoke("JoinGroup", groupId, lastSeq);
       } else {
-        await this.connection?.invoke("JoinGroup", groupId);
+        await this.connection?.invoke("JoinGroup", groupId, 0);
       }
     }
   }
